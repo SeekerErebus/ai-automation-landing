@@ -1,0 +1,523 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center pt-16 bg-slate-900 text-white overflow-hidden">
+    <!-- Layered background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-slate-900/40"></div>
+    <!-- Blue glow -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/8 rounded-full blur-3xl"></div>
+    <!-- Grain overlay -->
+    <div class="grain-overlay"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 py-24 sm:py-32 text-center">
+      <p class="text-blue-400/90 text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-6 animate-fade-up" style="animation-delay: 0.2s;">
+        AI Automation &middot; Salt Lake City, Utah
+      </p>
+
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 animate-fade-up" style="animation-delay: 0.35s;">
+        I Make Your Business<br />
+        <span class="text-blue-400">More Money</span> &mdash; or<br />
+        <span class="text-blue-400">Save You Money</span> &mdash;<br class="sm:hidden" /> with AI.
+      </h1>
+
+      <div class="w-16 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto mb-6 animate-fade-in" style="animation-delay: 0.5s;"></div>
+
+      <p class="text-base sm:text-lg text-slate-300/90 max-w-xl mx-auto mb-10 leading-relaxed font-light animate-fade-up" style="animation-delay: 0.5s;">
+        Most small businesses know AI could help. Almost none are using it. I fix that.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-up" style="animation-delay: 0.65s;">
+        <a href="#contact" class="btn-primary text-white font-medium px-8 py-3.5 rounded-lg text-sm tracking-wide">
+          Book a Free Discovery Call
+        </a>
+        <a href="#services" class="btn-outline !border-slate-600 !bg-slate-800/50 text-slate-200 font-medium px-8 py-3.5 rounded-lg text-sm tracking-wide hover:!bg-slate-700/50 hover:!border-slate-500">
+          See What I Do
+        </a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in" style="animation-delay: 1.2s;">
+        <div class="flex flex-col items-center gap-2 text-slate-500">
+          <span class="text-[10px] tracking-[0.2em] uppercase">Scroll</span>
+          <div class="w-px h-8 bg-gradient-to-b from-slate-500 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem / Opportunity -->
+  <section class="py-20 sm:py-28 bg-offwhite">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center reveal">
+        <p class="text-blue-600 text-xs font-semibold tracking-[0.25em] uppercase mb-4">The Opportunity</p>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8 leading-tight">
+          Your Competitors Are About<br class="hidden sm:block" /> to Leave You Behind
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12 mt-12">
+        <div class="reveal bg-white rounded-2xl p-8 sm:p-10 border border-slate-100 shadow-sm">
+          <div class="text-5xl sm:text-6xl font-bold text-blue-600 font-serif mb-4">77%</div>
+          <p class="text-slate-700 text-lg font-medium mb-2">of small businesses say AI would transform how they work.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">They know the technology exists. They know it could save them hours every week. They just haven't figured out how to use it yet.</p>
+        </div>
+        <div class="reveal bg-white rounded-2xl p-8 sm:p-10 border border-slate-100 shadow-sm">
+          <div class="text-5xl sm:text-6xl font-bold text-slate-900 font-serif mb-4">5%</div>
+          <p class="text-slate-700 text-lg font-medium mb-2">are actually using AI right now.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">That means 95% of small businesses are doing things the slow, expensive way. If you move now, you'll be ahead of almost everyone in your market.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <p class="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
+          That gap is your opportunity. I help you close it &mdash; with real AI tools built for your specific business, not some one-size-fits-all product you'll never use.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section divider -->
+  <div class="section-divider"></div>
+
+  <!-- Services -->
+  <section id="services" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 sm:mb-20 reveal">
+        <p class="text-blue-600 text-xs font-semibold tracking-[0.25em] uppercase mb-4">What I Build</p>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5">AI That Works While You Sleep</h2>
+        <p class="text-slate-500 max-w-lg mx-auto leading-relaxed">Simple, practical AI tools that save you time and money. No complicated software. No steep learning curve. It just works.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8 stagger-children">
+        <!-- AI Customer Service -->
+        <div class="reveal card-hover bg-offwhite rounded-2xl p-8 sm:p-10 border border-slate-100">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 mb-6">
+            <!-- Chat bubble icon -->
+            <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl sm:text-2xl font-semibold text-slate-900 mb-3">AI Customer Service</h3>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            A chatbot on your website that answers customer questions and captures leads &mdash; 24 hours a day, 7 days a week. It works while you sleep.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Answers common questions instantly
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Captures leads and sends them to your inbox
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Knows your business inside and out
+            </li>
+          </ul>
+        </div>
+
+        <!-- Email & Admin Automation -->
+        <div class="reveal card-hover bg-offwhite rounded-2xl p-8 sm:p-10 border border-slate-100">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 mb-6">
+            <!-- Envelope icon -->
+            <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl sm:text-2xl font-semibold text-slate-900 mb-3">Email & Admin Automation</h3>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Stop spending hours on email. AI handles sorting, drafting responses, and following up &mdash; so you can focus on the work that actually makes you money.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Sorts and prioritizes your inbox automatically
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Drafts replies you can send with one click
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Follows up with leads so nobody falls through the cracks
+            </li>
+          </ul>
+        </div>
+
+        <!-- Content Generation -->
+        <div class="reveal card-hover bg-offwhite rounded-2xl p-8 sm:p-10 border border-slate-100">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 mb-6">
+            <!-- Document icon -->
+            <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl sm:text-2xl font-semibold text-slate-900 mb-3">Content That Writes Itself</h3>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Social media posts, product descriptions, newsletters &mdash; created in minutes instead of hours. Sounds like you, reads like a pro.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Social media posts in your brand voice
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Product descriptions that sell
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Weekly newsletters ready to send
+            </li>
+          </ul>
+        </div>
+
+        <!-- Data & Reporting -->
+        <div class="reveal card-hover bg-offwhite rounded-2xl p-8 sm:p-10 border border-slate-100">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 mb-6">
+            <!-- Chart icon -->
+            <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl sm:text-2xl font-semibold text-slate-900 mb-3">Data & Reporting</h3>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Turn messy spreadsheets into clear reports. Automate invoices, inventory tracking, and scheduling &mdash; no more manual data entry.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Automatic reports from your existing data
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Invoice and scheduling automation
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Dashboards you can actually understand
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="relative py-20 sm:py-28 bg-slate-900 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800"></div>
+    <div class="grain-overlay"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16 sm:mb-20 reveal">
+        <p class="text-blue-400/90 text-xs font-semibold tracking-[0.25em] uppercase mb-4">Simple Process</p>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">Three Steps. That's It.</h2>
+        <p class="text-slate-400 max-w-lg mx-auto leading-relaxed">No long contracts. No confusing process. Here's exactly how it works.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <!-- Step 1 -->
+        <div class="reveal text-center md:text-left">
+          <div class="font-serif text-5xl sm:text-6xl font-bold step-number mb-4">01</div>
+          <h3 class="text-xl font-semibold text-white mb-3">Free Discovery Call</h3>
+          <p class="text-slate-400 leading-relaxed">
+            You tell me what's eating your time. I listen. We figure out where AI can make the biggest difference for your business. No cost, no commitment.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="reveal text-center md:text-left">
+          <div class="font-serif text-5xl sm:text-6xl font-bold step-number mb-4">02</div>
+          <h3 class="text-xl font-semibold text-white mb-3">I Build Your Solution</h3>
+          <p class="text-slate-400 leading-relaxed">
+            I create a custom AI tool designed for exactly what your business needs. Most projects are delivered in 1&ndash;2 weeks. You see progress the whole way.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="reveal text-center md:text-left">
+          <div class="font-serif text-5xl sm:text-6xl font-bold step-number mb-4">03</div>
+          <h3 class="text-xl font-semibold text-white mb-3">You Save Time & Money</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Your AI starts working immediately. I maintain it monthly so it keeps running smoothly. You focus on growing your business &mdash; not fighting with technology.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-16 reveal">
+        <a href="#contact" class="btn-primary text-white font-medium px-8 py-3.5 rounded-lg text-sm tracking-wide inline-block">
+          Book Your Free Call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 sm:py-28 bg-offwhite">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16 sm:mb-20 reveal">
+        <p class="text-blue-600 text-xs font-semibold tracking-[0.25em] uppercase mb-4">Investment</p>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5">Honest Pricing</h2>
+        <p class="text-slate-500 max-w-lg mx-auto leading-relaxed">Every business is different. Here's a straight answer on what things cost.</p>
+      </div>
+
+      <div class="reveal bg-white rounded-2xl p-8 sm:p-12 border border-slate-100 shadow-sm">
+        <div class="grid sm:grid-cols-3 gap-8 sm:gap-6 mb-10">
+          <div class="text-center sm:text-left">
+            <p class="text-sm text-slate-500 font-medium mb-2">Custom Solutions</p>
+            <p class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">$500 &ndash; $5,000</p>
+            <p class="text-sm text-slate-400 mt-2">Depends on what you need. Simple automations cost less. Bigger systems cost more. I'll give you an exact number before we start.</p>
+          </div>
+          <div class="text-center sm:text-left">
+            <p class="text-sm text-slate-500 font-medium mb-2">Monthly Maintenance</p>
+            <p class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Affordable</p>
+            <p class="text-sm text-slate-400 mt-2">A fraction of the setup cost. I keep your AI tools running, updated, and working right. You never have to touch them.</p>
+          </div>
+          <div class="text-center sm:text-left">
+            <p class="text-sm text-slate-500 font-medium mb-2">Discovery Call</p>
+            <p class="font-serif text-3xl sm:text-4xl font-bold text-blue-600">Free</p>
+            <p class="text-sm text-slate-400 mt-2">No commitment. No pressure. We talk about your business, I tell you what AI can do for you. If it's not a fit, we part as friends.</p>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-100 pt-8">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-slate-600 text-sm text-center sm:text-left">
+              <span class="font-medium text-slate-800">Most clients see a return in the first month.</span><br />
+              The time you save is worth more than what you pay.
+            </p>
+            <a href="#contact" class="btn-primary text-white font-medium px-6 py-3 rounded-lg text-sm tracking-wide shrink-0">
+              Get a Free Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section divider -->
+  <div class="section-divider"></div>
+
+  <!-- About / Trust -->
+  <section id="about" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="reveal">
+          <p class="text-blue-600 text-xs font-semibold tracking-[0.25em] uppercase mb-4">About</p>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8 leading-tight">A Real Person.<br />Right Here in SLC.</h2>
+
+          <div class="space-y-5 mb-10">
+            <p class="text-slate-600 leading-relaxed">
+              I'm Jonathan White, and I live right here in Salt Lake City. I'm not a big agency. I'm not a chatbot company. I'm a developer who specializes in building AI tools that actually work for small businesses.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              I've deployed production websites, built working AI automations, and helped real businesses save real time. When you work with me, you work with me directly &mdash; not a sales team, not a junior developer, not an overseas contractor.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              I use AI tools every day in my own work. I know what works, what doesn't, and how to build solutions that are worth the investment.
+            </p>
+          </div>
+
+          <a href="https://portfolio-alpha-one-sek457upb8.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors group">
+            See my portfolio
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="reveal">
+          <div class="bg-slate-50 rounded-2xl p-8 sm:p-10 border border-slate-100">
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="shrink-0 w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mt-0.5">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-slate-900 mb-1">Local to Salt Lake City</p>
+                  <p class="text-slate-500 text-sm">I'm your neighbor, not some remote company. We can meet in person.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="shrink-0 w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mt-0.5">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-slate-900 mb-1">Production-Ready Work</p>
+                  <p class="text-slate-500 text-sm">Real deployed sites and working AI automations. Not just prototypes.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="shrink-0 w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mt-0.5">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-slate-900 mb-1">You Work With Me Directly</p>
+                  <p class="text-slate-500 text-sm">No middlemen. No hand-offs. I build it, I explain it, I maintain it.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="shrink-0 w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mt-0.5">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-slate-900 mb-1">Fast Turnaround</p>
+                  <p class="text-slate-500 text-sm">Most projects delivered in 1&ndash;2 weeks. You won't wait months to see results.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 sm:py-20 bg-blue-600">
+    <div class="max-w-3xl mx-auto px-6 text-center reveal">
+      <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">Ready to See What AI Can Do for You?</h2>
+      <p class="text-blue-100 mb-8 leading-relaxed max-w-xl mx-auto">
+        Book a free discovery call. 20 minutes, no pressure. I'll tell you exactly what AI can do for your business &mdash; and what it can't.
+      </p>
+      <a href="#contact" class="inline-block bg-white text-blue-700 font-medium px-8 py-3.5 rounded-lg text-sm tracking-wide hover:bg-blue-50 transition-colors shadow-sm">
+        Book Your Free Call
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-20 sm:py-28 bg-offwhite">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-12 sm:mb-16 reveal">
+        <p class="text-blue-600 text-xs font-semibold tracking-[0.25em] uppercase mb-4">Get Started</p>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5">Let's Talk</h2>
+        <p class="text-slate-500 max-w-md mx-auto leading-relaxed">Tell me a little about your business and what's eating your time. I'll get back to you within one business day.</p>
+      </div>
+
+      <!-- Formspree form -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="reveal bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-100 space-y-6">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-slate-700 mb-2.5">Your Name</label>
+            <input type="text" id="name" name="name" required
+              class="form-input w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none" placeholder="Jane Smith" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-700 mb-2.5">Email</label>
+            <input type="email" id="email" name="email" required
+              class="form-input w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none" placeholder="jane@yourbusiness.com" />
+          </div>
+        </div>
+        <div>
+          <label for="business" class="block text-sm font-medium text-slate-700 mb-2.5">Your Business</label>
+          <input type="text" id="business" name="business"
+            class="form-input w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none" placeholder="Business name and what you do" />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-slate-700 mb-2.5">What's Taking Up Too Much of Your Time?</label>
+          <textarea id="message" name="message" rows="4" required
+            class="form-input w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none resize-none" placeholder="Tell me about the tasks you wish you didn't have to do manually..."></textarea>
+        </div>
+        <button type="submit"
+          class="w-full btn-primary text-white font-medium py-3.5 rounded-xl text-sm tracking-wide">
+          Send Message
+        </button>
+        <p class="text-center text-slate-400 text-xs">I'll respond within one business day. No spam, no sales pressure.</p>
+      </form>
+
+      <!-- Or email directly -->
+      <div class="text-center mt-8 reveal">
+        <p class="text-slate-500 text-sm">
+          Prefer email? Reach me directly at
+          <a href="mailto:jadeofsapphire@gmail.com" class="text-blue-600 hover:text-blue-700 font-medium transition-colors">jadeofsapphire@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative bg-slate-900 text-slate-400 overflow-hidden">
+    <div class="grain-overlay"></div>
+    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-600/30 to-transparent"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6 pt-16 sm:pt-20 pb-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
+        <!-- Brand -->
+        <div>
+          <h4 class="font-serif text-xl font-bold text-white mb-4">White AI Solutions</h4>
+          <p class="text-sm leading-relaxed text-slate-400/90 max-w-xs mb-6">AI automation for Salt Lake City small businesses. Simple tools that save you time and make you money.</p>
+          <a href="mailto:jadeofsapphire@gmail.com" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">jadeofsapphire@gmail.com</a>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-slate-300 mb-5">Navigate</h4>
+          <div class="space-y-3 text-sm">
+            <a href="#services" class="block footer-link text-slate-400 hover:text-white">Services</a>
+            <a href="#how-it-works" class="block footer-link text-slate-400 hover:text-white">How It Works</a>
+            <a href="#pricing" class="block footer-link text-slate-400 hover:text-white">Pricing</a>
+            <a href="#about" class="block footer-link text-slate-400 hover:text-white">About</a>
+            <a href="#contact" class="block footer-link text-slate-400 hover:text-white">Contact</a>
+          </div>
+        </div>
+
+        <!-- Contact info -->
+        <div>
+          <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-slate-300 mb-5">Contact</h4>
+          <div class="space-y-3 text-sm text-slate-400/90">
+            <p>Jonathan White</p>
+            <p>Salt Lake City, UT</p>
+            <a href="mailto:jadeofsapphire@gmail.com" class="block text-blue-400 hover:text-blue-300 transition-colors font-medium">jadeofsapphire@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">&copy; 2026 White AI Solutions. All rights reserved.</p>
+        <p class="text-xs text-slate-600">Built with AI in Salt Lake City</p>
+      </div>
+    </div>
+  </footer>
+</Layout>

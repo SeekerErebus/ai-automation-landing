@@ -1,0 +1,153 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "White AI Solutions | AI Automation for Salt Lake City Small Businesses",
+  description = "I help Salt Lake City small businesses save time and make more money with AI automation. Free discovery call — no jargon, no commitment."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://example.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-offwhite text-slate-800 font-sans antialiased">
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg border-b border-slate-200/60">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="group flex items-center gap-2">
+          <span class="font-serif text-xl font-bold text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">White AI Solutions</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a href="#services" class="nav-link hover:text-slate-900 transition-colors">Services</a>
+          <a href="#how-it-works" class="nav-link hover:text-slate-900 transition-colors">How It Works</a>
+          <a href="#pricing" class="nav-link hover:text-slate-900 transition-colors">Pricing</a>
+          <a href="#about" class="nav-link hover:text-slate-900 transition-colors">About</a>
+        </div>
+
+        <a href="#contact" class="hidden md:inline-block btn-primary text-white text-sm font-medium px-5 py-2.5 rounded-lg">
+          Free Discovery Call
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button id="mobile-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+          <span class="hamburger-line block w-5 h-0.5 bg-slate-700 transition-all duration-300"></span>
+          <span class="hamburger-line block w-5 h-0.5 bg-slate-700 mt-1.5 transition-all duration-300"></span>
+          <span class="hamburger-line block w-3.5 h-0.5 bg-slate-700 mt-1.5 transition-all duration-300 self-start ml-[10px]"></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="mobile-menu md:hidden border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 space-y-1">
+          <a href="#services" class="block py-3 px-3 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all mobile-menu-link">Services</a>
+          <a href="#how-it-works" class="block py-3 px-3 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all mobile-menu-link">How It Works</a>
+          <a href="#pricing" class="block py-3 px-3 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all mobile-menu-link">Pricing</a>
+          <a href="#about" class="block py-3 px-3 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all mobile-menu-link">About</a>
+          <a href="#contact" class="block py-3 px-3 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all mobile-menu-link">Contact</a>
+          <div class="pt-2 pb-1">
+            <a href="#contact" class="block text-center btn-primary text-white text-sm font-medium px-5 py-2.5 rounded-lg mobile-menu-link">
+              Free Discovery Call
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <slot />
+
+    <!-- Scroll-aware nav + mobile menu + reveal animations -->
+    <script>
+      // Nav scroll effect
+      const nav = document.getElementById('main-nav');
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          nav?.classList.add('nav-scrolled');
+          nav?.classList.remove('bg-white/80');
+        } else {
+          nav?.classList.remove('nav-scrolled');
+          nav?.classList.add('bg-white/80');
+        }
+      };
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      // Mobile menu toggle
+      const toggle = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const lines = toggle?.querySelectorAll('.hamburger-line');
+
+      toggle?.addEventListener('click', () => {
+        const isOpen = mobileMenu?.classList.contains('open');
+        mobileMenu?.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+
+        if (!isOpen) {
+          if (lines && lines[0]) (lines[0] as HTMLElement).style.transform = 'rotate(45deg) translate(3px, 3px)';
+          if (lines && lines[1]) (lines[1] as HTMLElement).style.opacity = '0';
+          if (lines && lines[2]) {
+            (lines[2] as HTMLElement).style.transform = 'rotate(-45deg) translate(3px, -3px)';
+            (lines[2] as HTMLElement).style.width = '20px';
+            (lines[2] as HTMLElement).style.marginLeft = '0';
+          }
+        } else {
+          if (lines && lines[0]) (lines[0] as HTMLElement).style.transform = '';
+          if (lines && lines[1]) (lines[1] as HTMLElement).style.opacity = '1';
+          if (lines && lines[2]) {
+            (lines[2] as HTMLElement).style.transform = '';
+            (lines[2] as HTMLElement).style.width = '';
+            (lines[2] as HTMLElement).style.marginLeft = '';
+          }
+        }
+      });
+
+      // Close mobile menu on link click
+      document.querySelectorAll('.mobile-menu-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu?.classList.remove('open');
+          if (lines && lines[0]) (lines[0] as HTMLElement).style.transform = '';
+          if (lines && lines[1]) (lines[1] as HTMLElement).style.opacity = '1';
+          if (lines && lines[2]) {
+            (lines[2] as HTMLElement).style.transform = '';
+            (lines[2] as HTMLElement).style.width = '';
+            (lines[2] as HTMLElement).style.marginLeft = '';
+          }
+        });
+      });
+
+      // Intersection Observer for reveal animations
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+      revealElements.forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>
