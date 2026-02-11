@@ -19,14 +19,60 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <!-- canonical URL will be set after Vercel deploy -->
+    <meta property="og:url" content="https://ai-automation-landing.vercel.app" />
+    <meta property="og:image" content="https://ai-automation-landing.vercel.app/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="White AI Solutions" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://ai-automation-landing.vercel.app/og-image.svg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ai-automation-landing.vercel.app" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
     <title>{title}</title>
+
+    <!-- LocalBusiness Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "White AI Solutions",
+      "description": "AI automation services for small businesses in Salt Lake City. Custom chatbots, workflow automation, lead capture, and AI-powered tools.",
+      "url": "https://ai-automation-landing.vercel.app",
+      "email": "jadeofsapphire@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Salt Lake City",
+        "addressRegion": "UT",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Salt Lake City"
+      },
+      "priceRange": "$500-$5,000",
+      "serviceType": ["AI Automation", "Chatbot Development", "Workflow Automation", "Web Development"],
+      "knowsAbout": ["Artificial Intelligence", "Business Automation", "Small Business Solutions"]
+    })} />
   </head>
   <body class="bg-offwhite text-slate-800 font-sans antialiased">
     <!-- Navigation -->
