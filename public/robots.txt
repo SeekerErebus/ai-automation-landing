@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ai-automation-landing.vercel.app/sitemap-index.xml
+Sitemap: https://ai-automation-landing-mu.vercel.app/sitemap-index.xml
