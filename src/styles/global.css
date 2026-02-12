@@ -83,6 +83,7 @@
 .stagger-children .reveal:nth-child(2) { transition-delay: 100ms; }
 .stagger-children .reveal:nth-child(3) { transition-delay: 200ms; }
 .stagger-children .reveal:nth-child(4) { transition-delay: 300ms; }
+.stagger-children .reveal:nth-child(5) { transition-delay: 400ms; }
 
 /* Base body styles */
 body {
